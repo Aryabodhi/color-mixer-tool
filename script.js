@@ -60,3 +60,4 @@ function isOutputWhite() {
         (colors.includes('Cyan') && colors.includes('Purple')) ||
         (colors.includes('Purple') && colors.includes('Yellow'));
 }
+ 
