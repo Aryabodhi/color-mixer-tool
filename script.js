@@ -8,6 +8,7 @@ const colors = [];
 colorButtons.forEach(button => {
     button.addEventListener('click', () => {
         const color = button.getAttribute('data-color');
+        console.log(`Button clicked: ${color}`); // Log the clicked color to the console
         colors.push(color);
         const listItem = document.createElement('li');
         listItem.textContent = color;
@@ -17,12 +18,14 @@ colorButtons.forEach(button => {
 });
 
 clearBtn.addEventListener('click', () => {
+    console.log('Clear button clicked'); // Log clear button click
     colors.length = 0;
     colorList.innerHTML = '';
     outputColor.textContent = 'None';
 });
 
 function updateOutputColor() {
+    console.log('Updating output color'); // Log the output color update process
     if (isOutputWhite()) {
         outputColor.textContent = 'White';
     } else if (isOutputCyan()) {
@@ -60,4 +63,3 @@ function isOutputWhite() {
         (colors.includes('Cyan') && colors.includes('Purple')) ||
         (colors.includes('Purple') && colors.includes('Yellow'));
 }
- 
