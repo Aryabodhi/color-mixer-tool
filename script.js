@@ -65,3 +65,4 @@ document.addEventListener('DOMContentLoaded', () => {
             (colors.includes('Purple') && colors.includes('Yellow'));
     }
 });
+ 
