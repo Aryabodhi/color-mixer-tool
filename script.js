@@ -1,21 +1,19 @@
-const colorInput = document.getElementById('colorInput');
-const addColorBtn = document.getElementById('addColorBtn');
+const colorButtons = document.querySelectorAll('.color-btn');
 const clearBtn = document.getElementById('clearBtn');
 const outputColor = document.getElementById('outputColor');
 const colorList = document.getElementById('colorList');
 
 const colors = [];
 
-addColorBtn.addEventListener('click', () => {
-    const color = colorInput.value.trim();
-    if (color) {
+colorButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const color = button.getAttribute('data-color');
         colors.push(color);
         const listItem = document.createElement('li');
         listItem.textContent = color;
         colorList.appendChild(listItem);
         updateOutputColor();
-        colorInput.value = '';
-    }
+    });
 });
 
 clearBtn.addEventListener('click', () => {
