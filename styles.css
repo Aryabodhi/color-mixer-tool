@@ -18,15 +18,13 @@ body {
     margin-bottom: 20px;
 }
 
-input[type="text"] {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    width: 70%;
+.color-buttons {
+    margin: 10px 0;
 }
 
-button {
+.color-btn {
     padding: 10px 20px;
+    margin: 5px;
     border-radius: 5px;
     border: none;
     background-color: #007BFF;
@@ -34,12 +32,26 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.color-btn:hover {
     background-color: #0056b3;
 }
 
 .output {
     margin-top: 20px;
+}
+
+button#clearBtn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #FF4136;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button#clearBtn:hover {
+    background-color: #c0392b;
 }
 
 ul {
